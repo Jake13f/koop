@@ -19,7 +19,7 @@ const sharedQueryParamSchema = joi
     objectIds: joi.alternatives(joi.number().integer(), joi.string().optional()),
     returnCountOnly: joi.boolean().optional(),
     orderByFields: joi.string().optional(),
-    outSR: spatialReferenceSchema,
+    outSR: spatialReferenceSchema.optional().allow(null),
   })
   .unknown();
 
